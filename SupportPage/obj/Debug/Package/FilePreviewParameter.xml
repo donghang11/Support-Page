@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Support" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=DELLPRECISIONT3;Initial Catalog=Support;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="Support-Web.config Connection String" description="" value="Data Source=tcp:192.168.1.36\SQLEXPRESS;Initial Catalog=Support;Integrated Security=false;user id=SentechAdmin;password=admin@sentech.co.jp;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Support']/@connectionString" />
+  </parameter>
+  <parameter name="SupportConnectionString-Web.config Connection String" description="" value="Data Source=tcp:192.168.1.36\SQLEXPRESS;Initial Catalog=Support;Integrated Security=false;user id=SentechAdmin;password=admin@sentech.co.jp;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SupportConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="SupportConnectionStringAdmin-Web.config Connection String" description="" value="Data Source=tcp:192.168.1.36\SQLEXPRESS;Initial Catalog=Support;Integrated Security=false;user id=SentechAdmin;password=admin@sentech.co.jp;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SupportConnectionStringAdmin']/@connectionString" />
+  </parameter>
+  <parameter name="SupportConnectionStringUser-Web.config Connection String" description="" value="Data Source=tcp:192.168.1.36\SQLEXPRESS;Initial Catalog=Support;Integrated Security=false;user id=SentechAdmin;password=admin@sentech.co.jp;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SupportConnectionStringUser']/@connectionString" />
+  </parameter>
+</parameters>

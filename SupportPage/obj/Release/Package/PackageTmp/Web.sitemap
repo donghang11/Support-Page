@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="/" title="Home">
+    <siteMapNode url="Case" title="Case list">
+      <siteMapNode url="Detail/DetailCase2" title="Case Detail">
+        <siteMapNode url="Detail/DetailAction2" title="Action">
+          <siteMapNode url="Detail/DetailFile2" title="File">
+
+          </siteMapNode>
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="Admin/Admin" title="Admin">
+      <siteMapNode url="Admin/Member" title="Member">
+
+      </siteMapNode>
+      <siteMapNode url="Admin/Model" title="Model">
+        <siteMapNode url="Detail/DetailModel" title="Model Detail">
+
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="Admin/Org" title="Org">
+
+      </siteMapNode>
+      <siteMapNode url="Admin/Person" title="Person">
+
+      </siteMapNode>
+      <siteMapNode url="Admin/Role" title="Role">
+
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="Help/Help" title="Help">
+      <siteMapNode url="Help/Intro.html" title="Intro"></siteMapNode>
+      <siteMapNode url="Help/Login.html" title="Login"></siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="About" title="About">
+
+    </siteMapNode>
+    <siteMapNode url="Contact" title="Contact">
+
+    </siteMapNode>
+    <siteMapNode url="Account/ResetPassword" title="Reset Password">
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

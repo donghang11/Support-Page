@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainSite.Master.cs" Inherits="SupportPage.MainSiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="zh">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Sentech Support Pages</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--若要了解有关在 ScriptManager 中绑定脚本的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--框架脚本--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--站点脚本--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">
+                        <asp:Image ImageUrl="~/Images/sentechLogo.png" runat="server" AlternateText="SENTECH SUPPORT PAGE" Height="30px" Width="137px" ImageAlign="Middle" /></a>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <%--                        <li><a runat="server" href="~/?home=1">
+                            <asp:Literal runat="server" Text="<%$ Resources:Default,home%>"></asp:Literal></a></li>--%>
+                        <li><a runat="server" href="~/">
+                            <asp:Literal runat="server" Text="<%$ Resources:Default,home%>"></asp:Literal></a></li>
+                        <li><a runat="server" href="~/Case">
+                            <asp:Literal runat="server" Text="<%$Resources:Case, case_name %>"></asp:Literal></a></li>
+                        <li><a runat="server" id="main_site_master_nav_admin" href="~/Admin/Admin.aspx" visible="false">
+                            <asp:Literal runat="server" Text="<%$ Resources:Default,admin%>"></asp:Literal></a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">HELP<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Help">
+                                    <asp:Literal runat="server" Text="HELP"></asp:Literal></a></li>
+                                <li><a runat="server" href="~/About">
+                                    <asp:Literal runat="server" Text="<%$ Resources:Default,about%>"></asp:Literal></a></li>
+                                <li><a runat="server" href="~/Contact">
+                                    <asp:Literal runat="server" Text="<%$ Resources:Default,contact%>"></asp:Literal></a></li>
+                                <li><a runat="server" href="http://sentech.co.jp/information/c/faq" target="_blank">
+                                    <asp:Literal runat="server" Text="To Sentech.co.jp FAQ"></asp:Literal></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">LANGUAGE<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="javascript:setLang('zh-CN');">
+                                    <asp:Literal ID="Chinese" runat="server" Text="简体中文"></asp:Literal></a></li>
+                                <li><a runat="server" href="javascript:setLang('en-US');">
+                                    <asp:Literal runat="server" Text="English"></asp:Literal></a></li>
+                                <li><a runat="server" href="javascript:setLang('ja-JP');">
+                                    <asp:Literal runat="server" Text="日本語"></asp:Literal></a></li>
+                            </ul>
+                        </li>
+                        <li><a id="login" runat="server" href="~/Account/Login">
+                            <asp:Literal runat="server" Text="<%$ Resources:Default,login%>"></asp:Literal></a></li>
+                        <li><a id="loggedin" runat="server" visible="false"></a></li>
+                        <li style="margin-top: 6px">
+                            <asp:Button ID="logoff" CssClass="btn btn-primary" BorderStyle="None" runat="server" OnClick="logoff_LoggedOut" Text="<%$ Resources:Default,logoff%>" Visible="false"></asp:Button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            function setLang(lang) {
+
+                var d = new Date();
+                d.setTime(d.getTime() + (1000 * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toGMTString();
+                document.cookie = "Language=" + lang + "; " + expires;
+                var c = getCookie("Language");
+                location.reload();
+            }
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1);
+                    if (c.indexOf(name) == 0)
+                        return c.substring(name.length, c.length);
+                }
+                return "";
+            }
+
+            function checkCookie() {
+                var lang = getCookie("Language");
+                if (lang != "") {
+                } 
+            }
+
+        </script>
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <%--            <footer>
+                <p>&copy; <%: DateTime.Now.Date.ToString("D")%> Sentech Corporation</p>
+
+            </footer>--%>
+        </div>
+    </form>
+</body>
+</html>

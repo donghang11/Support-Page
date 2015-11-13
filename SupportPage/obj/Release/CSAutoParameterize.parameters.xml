@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-SupportPage-20150522115843.mdf;Initial Catalog=aspnet-SupportPage-20150522115843;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="SupportConnectionString-Web.config Connection String" description="SupportConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=tcp:192.168.1.105;Initial Catalog=Support;Integrated Security=false;user id=SentechAdmin;password=admin@sentech.co.jp;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SupportConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="SupportConnectionStringAdmin-Web.config Connection String" description="SupportConnectionStringAdmin Connection String used in web.config by the application to access the database." defaultValue="Data Source=tcp:192.168.1.105;Initial Catalog=Support;Integrated Security=false;user id=SentechAdmin;password=admin@sentech.co.jp;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SupportConnectionStringAdmin']/@connectionString" />
+  </parameter>
+  <parameter name="SupportConnectionStringUser-Web.config Connection String" description="SupportConnectionStringUser Connection String used in web.config by the application to access the database." defaultValue="Data Source=tcp:192.168.1.105;Initial Catalog=Support;Integrated Security=false;user id=SentechAdmin;password=admin@sentech.co.jp;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SupportConnectionStringUser']/@connectionString" />
+  </parameter>
+  <parameter name="Support-Web.config Connection String" description="Support Connection String used in web.config by the application to access the database." defaultValue="Data Source=tcp:192.168.1.105;Initial Catalog=Support;Integrated Security=false;user id=SentechAdmin;password=admin@sentech.co.jp;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DONG\\documents\\visual\ studio\ 2013\\Projects\\SupportPage\\SupportPage\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Support']/@connectionString" />
+  </parameter>
+</parameters>
